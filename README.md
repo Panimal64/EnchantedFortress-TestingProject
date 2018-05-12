@@ -1,4 +1,4 @@
-#
+# NOT ORIGINAL VERSION
 This is a clone of Enchanted Fortress from https://github.com/subchannel13/EnchantedFortress.  This version is being used for a base for a software testing class project 
 
 # Enchanted Fortress
