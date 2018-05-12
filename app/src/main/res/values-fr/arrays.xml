@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="difficultyLevels">
+        <item>Facile</item>
+        <item>Normal</item>
+        <item>Difficile</item>
+    </string-array>
+    <string-array name="translators">
+        <item>Allemand (de) - mueller-ma</item>
+        <item>Français (fr) - Julien Lepiller</item>
+    </string-array>
+</resources>
