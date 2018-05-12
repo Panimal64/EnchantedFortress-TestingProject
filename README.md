@@ -1,3 +1,6 @@
+#
+This is a clone of Enchanted Fortress from https://github.com/subchannel13/EnchantedFortress.  This version is being used for a base for a software testing class project 
+
 # Enchanted Fortress
 
 A simple game inspired by Age of Castles. Distribute your population to farming, construction, guard duty and scholarship, survive demon invasion and find the way to banish them forever.
