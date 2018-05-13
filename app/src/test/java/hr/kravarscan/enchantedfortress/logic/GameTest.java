@@ -61,45 +61,63 @@ public class GameTest {
 
     @Test
     public void getSelectedTech() {
+        System.out.println("Selected Tech: " + testGame.getSelectedTech());
+        assertEquals(testGame.getSelectedTech(),0);
     }
 
     @Test
     public void selectTech() {
+        testGame.selectTech(1);
+        assertEquals(testGame.getSelectedTech(),1);
+        System.out.println("New Tech: " + testGame.getSelectedTech());
     }
 
     @Test
     public void roundedPop() {
-        Game test = new Game(diff);
+        //Don't really need to create a new game object everytime
+        //Game test = new Game(diff);
 
-        double result = test.roundedPop();
+        double result = testGame.roundedPop();
 
         //Where does 10 come from?
         assertEquals(10, result, 0);
 
     }
 
-    @Test
+   @Test
     public void realDeltaPop() {
+        System.out.println("Real Delta Pop: " + testGame.realDeltaPop());
+        assertEquals(testGame.realDeltaPop(),2);
     }
 
     @Test
     public void deltaWalls() {
+        System.out.println("Delta Walls: " + testGame.deltaWalls());
+        assertEquals(testGame.deltaWalls(),0,.01);
     }
 
     @Test
     public void militaryStrength() {
+        System.out.println("Military Strength: " + testGame.militaryStrength());
+        assertEquals(testGame.militaryStrength(),100.0,.01);
     }
 
     @Test
     public void deltaResearch() {
+        System.out.println("Delta Research: " + testGame.deltaResearch());
+        assertEquals(testGame.deltaResearch(),46.0,.01);
     }
 
     @Test
     public void isOver() {
+        System.out.println("Game over: " + testGame.isOver());
+        assertEquals(testGame.isOver(),false);
     }
 
     @Test
     public void isPlayerAlive() {
+        System.out.println("Player Alive: " + testGame.isPlayerAlive());
+        assertEquals(testGame.isPlayerAlive(),true);
     }
 
     @Test
