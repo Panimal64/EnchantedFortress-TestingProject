@@ -69,6 +69,13 @@ public class GameTest {
 
     @Test
     public void roundedPop() {
+        Game test = new Game(diff);
+
+        double result = test.roundedPop();
+
+        //Where does 10 come from?
+        assertEquals(10, result, 0);
+
     }
 
     @Test
@@ -106,4 +113,6 @@ public class GameTest {
     @Test
     public void load() {
     }
+
+
 }
