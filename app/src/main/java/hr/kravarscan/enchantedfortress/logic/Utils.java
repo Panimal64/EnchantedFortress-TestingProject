@@ -20,7 +20,7 @@ package hr.kravarscan.enchantedfortress.logic;
  */
 
 public final class Utils {
-    private Utils()
+    protected Utils()
     {}
 
     public static double clamp(double x, double min, double max) {

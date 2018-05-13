@@ -34,7 +34,7 @@ public class Difficulty {
     private final double demonSpawnFactor;
     private final double demonPowerBase;
 
-    private Difficulty(double startingPop, double demonSpawnFactor, double demonPowerBase) {
+    protected Difficulty(double startingPop, double demonSpawnFactor, double demonPowerBase) {
         this.startingPop = startingPop;
         this.demonSpawnFactor = demonSpawnFactor;
         this.demonPowerBase = demonPowerBase;
