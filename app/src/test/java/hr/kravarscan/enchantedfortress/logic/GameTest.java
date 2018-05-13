@@ -5,9 +5,11 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class GameTest {
-
-    Difficulty diff = new Difficulty(10,10,10);
-    Game testGame = new Game(diff);
+    
+    //To get around the private method stuff
+    Difficulty diff;
+    Difficulty testDiff = diff.Medium;
+    Game testGame= new Game(testDiff);
 
     @Test
     public void getDifficulty() {
@@ -74,26 +76,27 @@ public class GameTest {
 
     @Test
     public void roundedPop() {
-        //Don't really need to create a new game object everytime
+        //Don't really need to create a new game object every time
+        //See changes made above to how the game was created.
         //Game test = new Game(diff);
 
         double result = testGame.roundedPop();
 
         //Where does 10 come from?
         assertEquals(10, result, 0);
+        //This should fail now. The expected should be 100
+        //The 10 is the population floor as defined when creating 
+        //the difficulty
 
     }
     
 /* 
-
     This is the rounded pop test I had written, not sure why yours comes up with 10 though.
-
     @Test
     public void roundedPop() {
         System.out.println("Rounded Pop: " + testGame.roundedPop());
         assertEquals(testGame.roundedPop(),100.0,.01);
     }
-    
 */
 
    @Test
