@@ -14,14 +14,8 @@ public class TechnologyTest {
     public void cost() {
         Technology test = new Technology();
 
-        double LevelExp = 4 / 3.0;
-        double Level0Cost = 100;
-        double Level = 0;
-
         double result = test.cost();
-        double calculated = Level0Cost * Math.pow(LevelExp, Level);
 
-
-        assertEquals(calculated, result, 1.0);
+        assertEquals(100, result, 1.0);
     }
 }
