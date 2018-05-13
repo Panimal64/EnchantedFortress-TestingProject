@@ -83,6 +83,18 @@ public class GameTest {
         assertEquals(10, result, 0);
 
     }
+    
+/* 
+
+    This is the rounded pop test I had written, not sure why yours comes up with 10 though.
+
+    @Test
+    public void roundedPop() {
+        System.out.println("Rounded Pop: " + testGame.roundedPop());
+        assertEquals(testGame.roundedPop(),100.0,.01);
+    }
+    
+*/
 
    @Test
     public void realDeltaPop() {
