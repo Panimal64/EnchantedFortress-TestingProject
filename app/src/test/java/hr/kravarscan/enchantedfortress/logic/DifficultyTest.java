@@ -7,10 +7,6 @@ public class DifficultyTest {
 
     Difficulty test;
 
-    //TRYING TO TEST PUSH STUFF
-    //PUSHING MORE NOTHINGS
-
-
     //grabbing difficulty
     Difficulty medium = test.Medium;
     @Test
