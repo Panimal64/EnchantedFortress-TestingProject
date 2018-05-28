@@ -1,6 +1,7 @@
 package hr.kravarscan.enchantedfortress.logic;
 
 import org.junit.Test;
+import java.util.Arrays;
 import static org.junit.Assert.*;
 
 public class GameTest {
@@ -167,17 +168,24 @@ public class GameTest {
         assertEquals(pop, testGame.roundedPop(),.0001);
     }
 
-    //need to add latest save keys to this test will not run with below code
-    //atm
     @Test
-    public void load() {
+    public void differentSaves() {
         double[] medData = testGame.save();
         Difficulty Hard = testDiff.Levels[2];
-        Game hardGame = new Game(testDiff);
-        double hardPop = hardGame.roundedPop();
-        hardGame.load(medData);
-        double loadPop = hardGame.roundedPop();
-        assertNotEquals(hardPop,loadPop,.0001);
+        Game hardGame = new Game(Hard);
+        double[] hardData = hardGame.save();
+        boolean same = Arrays.equals(medData, hardData);
+        assertFalse(same);
+    }
+    //possible bug with array out of bounds
+    @Test
+    public void load() {
+       //27 instead of 26 otherwies array out of bounds
+        double[] load = {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1};
+        testGame.load(load);
+        int lol = testGame.reportAttackers;
+        double [] save = testGame.save();
+        assertNotSame(load,save);
     }
 
 
