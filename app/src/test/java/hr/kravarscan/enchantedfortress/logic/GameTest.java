@@ -89,28 +89,9 @@ public class GameTest {
 
     @Test
     public void roundedPop() {
-        //Don't really need to create a new game object every time
-        //See changes made above to how the game was created.
-        //Game test = new Game(diff);
-
         double result = testGame.roundedPop();
-
-        //Where does 10 come from?
         assertEquals(100, result, 0);
-        //This should fail now. The expected should be 100
-        //The 10 is the population floor as defined when creating 
-        //the difficulty
-
     }
-    
-/* 
-    This is the rounded pop test I had written, not sure why yours comes up with 10 though.
-    @Test
-    public void roundedPop() {
-        System.out.println("Rounded Pop: " + testGame.roundedPop());
-        assertEquals(testGame.roundedPop(),100.0,.01);
-    }
-*/
 
    @Test
     public void realDeltaPop() {
@@ -187,7 +168,7 @@ public class GameTest {
     //possible bug with array out of bounds
     @Test
     public void load() {
-       //27 instead of 26 otherwies array out of bounds
+       //27 instead of 26 otherwise array out of bounds
         double[] load = {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1};
         testGame.load(load);
         int lol = testGame.reportAttackers;
@@ -195,5 +176,10 @@ public class GameTest {
         assertNotSame(load,save);
     }
 
+    @Test
+    public void milStrength(){
+        double milStr = testGame.militaryStrength();
+        assertEquals(100.0, milStr, .01);
+    }
 
 }
