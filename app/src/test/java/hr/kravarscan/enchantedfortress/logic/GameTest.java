@@ -152,14 +152,32 @@ public class GameTest {
 
     @Test
     public void wallsChangeEndTurn() {
+       //unless make walls manually this test still needs some work
+       double initialWall = testGame.walls;
+       testGame.demonGates = 10000000;
+       testGame.endTurn();
+       double finalWall = testGame.walls;
+       assertEquals(initialWall,finalWall, 1.01);
 
     }
     @Test
-    public void save() {
+    public void savePopulation() {
+        double[] data = testGame.save();
+        double pop = data[2];
+        assertEquals(pop, testGame.roundedPop(),.0001);
     }
 
+    //need to add latest save keys to this test will not run with below code
+    //atm
     @Test
     public void load() {
+        double[] medData = testGame.save();
+        Difficulty Hard = testDiff.Levels[2];
+        Game hardGame = new Game(testDiff);
+        double hardPop = hardGame.roundedPop();
+        hardGame.load(medData);
+        double loadPop = hardGame.roundedPop();
+        assertNotEquals(hardPop,loadPop,.0001);
     }
 
 
