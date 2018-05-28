@@ -1,7 +1,6 @@
 package hr.kravarscan.enchantedfortress.logic;
 
 import org.junit.Test;
-
 import static org.junit.Assert.*;
 
 public class GameTest {
@@ -136,9 +135,25 @@ public class GameTest {
     }
 
     @Test
-    public void endTurn() {
+    public void endTurnIncrease() {
+       int turn = testGame.turn;
+       testGame.endTurn();
+       int turnAfterEndTurn = testGame.turn;
+       assertNotEquals(turn,turnAfterEndTurn);
     }
 
+    @Test
+    public void PopChangeEndTurn() {
+       double initalPop = testGame.roundedPop();
+       testGame.endTurn();
+       double finalPop = testGame.roundedPop();
+       assertNotEquals(initalPop, finalPop);
+    }
+
+    @Test
+    public void wallsChangeEndTurn() {
+
+    }
     @Test
     public void save() {
     }
