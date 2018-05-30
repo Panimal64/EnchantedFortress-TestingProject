@@ -88,6 +88,18 @@ public class GameTest {
     }
 
     @Test
+    public void selectTechLess(){
+        testGame.selectTech(0);
+        assertEquals(testGame.getSelectedTech(), 0);
+    }
+
+    @Test
+    public void selectTechGreater(){
+        testGame.selectTech(5);
+        assertEquals(testGame.getSelectedTech(), 5);
+    }
+
+    @Test
     public void roundedPop() {
         double result = testGame.roundedPop();
         assertEquals(100, result, 0);
