@@ -89,14 +89,14 @@ public class GameTest {
 
     @Test
     public void selectTechLess(){
-        testGame.selectTech(0);
+        testGame.selectTech(-1);
         assertEquals(testGame.getSelectedTech(), 0);
     }
 
     @Test
     public void selectTechGreater(){
-        testGame.selectTech(5);
-        assertEquals(testGame.getSelectedTech(), 5);
+        testGame.selectTech(6);
+        assertEquals(testGame.getSelectedTech(), 0);
     }
 
     @Test
